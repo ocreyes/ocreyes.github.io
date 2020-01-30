@@ -17,25 +17,39 @@
 
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        am4core.ready(function() {
-
-            // Themes begin
-            am4core.useTheme(am4themes_animated);
-            // Themes end
-            
-            var chart = am4core.create("chartdiv", am4charts.ChordDiagram);
-        }
+        <style>
+        </style>
     `;
 
-    /* amScript.onload = () => 
+    amScript.onload = () => 
     amScript2.onload = () => 
     amScript3.onload = () => 
 
     am4core.useTheme(am4themes_animated);
 
-    var chart = am4core.create("chartdiv", am4charts.ChordDiagram); */
+    var chart = am4core.create("chartdiv", am4charts.ChordDiagram);
 
 	class Chord extends HTMLElement {
+        
+        disconnectedCallback () {
+            // your cleanup code goes here
+            try{
+                document.head.removeChild(amScript);
+                document.head.removeChild(amScript2);
+                document.head.removeChild(amScript3);
+            }
+            catch{}
+        }
+
+        //Fired when the widget is added to the html DOM of the page
+        connectedCallback(){
+                const bcRect = this.getBoundingClientRect();
+                this._widgetHeight = bcRect.height;
+                this._widgetWidth = bcRect.width;
+    
+                this.redraw();
+        }
+
 		constructor() {
 			super(); 
             
@@ -44,20 +58,6 @@
             this._svgContainer;
 			
 		}
-				  
-		//Fired when the widget is added to the html DOM of the page
-        connectedCallback(){
-            const bcRect = this.getBoundingClientRect();
-            this._widgetHeight = bcRect.height;
-            this._widgetWidth = bcRect.width;
-
-            this.redraw();
-        }
-
-         //Fired when the widget is removed from the html DOM of the page (e.g. by hide)
-        disconnectedCallback(){
-        
-        }
 
          //When the custom widget is updated, the Custom Widget SDK framework executes this function first
 		onCustomWidgetBeforeUpdate(oChangedProperties) {
@@ -74,7 +74,6 @@
         
         }
 
-        
         //When the custom widget is resized on the canvas, the Custom Widget SDK framework executes the following JavaScript function call on the custom widget
         // Commented out by default
         /*
