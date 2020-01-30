@@ -17,12 +17,16 @@
 
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <style>
-	#chartdiv {
- 	 width: 100%;
-  	 height: 500px;
-	}
-        </style>
+        <script>
+        am4core.ready(function() {
+
+            // Themes begin
+            am4core.useTheme(am4themes_animated);
+            // Themes end
+            
+            var chart = am4core.create("chartdiv", am4charts.ChordDiagram);
+        }
+        </script>
     `;
 
     amScript.onload = () => 
@@ -39,7 +43,6 @@
             
             this._shadowRoot = this.attachShadow({mode: 'open'});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this.style.height = "100%";  //Beta Workaround
             this._svgContainer;
 			
 		}
