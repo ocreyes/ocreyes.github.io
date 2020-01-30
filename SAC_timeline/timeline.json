@@ -4,22 +4,23 @@
 	"name": "SAC Demo Timeline",
 	"description": "SAC Timeline demo",
 	"newInstancePrefix": "Timeline",
-	"icon": "https://ocreyes.github.io/GaugeBox/gauge_icon.png",
+	"icon": "https://ocreyes.github.io/SAC_timeline/timeline_icon.png",
 	"vendor": "amCharts",
 	"eula": "EULA",
 	"license": "1.0",
-	"scripts": [
+	"imports": [
 		"https://www.amcharts.com/lib/4/core.js",
-		"https://www.amcharts.com/lib/4/charts.js",
-		"https://www.amcharts.com/lib/4/plugins/timeline.js",
-		"https://www.amcharts.com/lib/4/plugins/bullets.js",
-		"https://www.amcharts.com/lib/4/themes/animated.js"
+    	"https://www.amcharts.com/lib/4/charts.js",
+    	"https://www.amcharts.com/lib/4/plugins/timeline.js",
+    	"https://www.amcharts.com/lib/4/themes/dark.js",
+    	"https://www.amcharts.com/lib/4/themes/animated.js",
+    	"https://www.amcharts.com/lib/4/plugins/bullets.js"
 	],
 	"webcomponents": [
 		{
 			"kind": "main",
 			"tag": "com-sap-demo-timeline",
-			"url": "https://ocreyes.github.io/GaugeBox/box.js",
+			"url": "https://ocreyes.github.io/SAC_timeline/timeline.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}
