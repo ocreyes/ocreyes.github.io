@@ -4,7 +4,7 @@
         <h1>Hello Oreyes</h1>
     `;
 
-    customElements.define('com-demo-timeline', class HelloWorld1 extends HTMLElement {
+    customElements.define('com-demo-timeline', class Timeline extends HTMLElement {
 
 
 		constructor() {
