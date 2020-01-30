@@ -21,13 +21,13 @@
         </style>
     `;
 
-    amScript.onload = () => 
+    /*amScript.onload = () => 
     amScript2.onload = () => 
     amScript3.onload = () => 
 
     am4core.useTheme(am4themes_animated);
 
-    var chart = am4core.create("chartdiv", am4charts.ChordDiagram);
+    var chart = am4core.create("chartdiv", am4charts.ChordDiagram);*/
 
 	class Chord extends HTMLElement {
         
