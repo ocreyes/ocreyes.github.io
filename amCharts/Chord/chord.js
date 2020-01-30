@@ -17,7 +17,6 @@
 
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <script>
         am4core.ready(function() {
 
             // Themes begin
@@ -26,7 +25,6 @@
             
             var chart = am4core.create("chartdiv", am4charts.ChordDiagram);
         }
-        </script>
     `;
 
     /* amScript.onload = () => 
