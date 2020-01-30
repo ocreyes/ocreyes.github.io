@@ -1,5 +1,5 @@
 (function()  {
-    let tlScript = document.createElement('script');
+    let tlScript = document.createElement('template');
     tlScript.innerHTML = `
         <h1>Hello OReyes</h1>
     `;
