@@ -18,6 +18,10 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
         <style>
+	#chartdiv {
+ 	 width: 100%;
+  	 height: 500px;
+	}
         </style>
     `;
 
