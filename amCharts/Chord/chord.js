@@ -74,18 +74,7 @@
         */
 
         redraw(){
-            var persona = {
-                fistName = "Tavo",
-                lastName = "Reyes",
-                id = 39066,
-
-                fullName : function(){
-                    return this.fistName + " " + this.lastName + " " + "id: " + +this.id;
-                }
-
-            };
-
-            am4core.ready(function() {
+                am4core.ready(function() {
 
                 am4core.useTheme(am4themes_animated);
 
