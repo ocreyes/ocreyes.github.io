@@ -55,7 +55,7 @@
                 this._tagContainer.parentNode.removeChild(this._tagContainer);
             }
 
-            var shadow = window.getSelection(this.shadowRoot);
+            var shadow = window.getSelection(this._shadowRoot);
             this._tagContainer = document.createElement(this._tagType);
 
             var theText = document.createElement(this._tagText);
