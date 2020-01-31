@@ -23,11 +23,7 @@
 
     /*amScript.onload = () => 
     amScript2.onload = () => 
-    amScript3.onload = () => 
-
-    am4core.useTheme(am4themes_animated);
-
-    var chart = am4core.create("chartdiv", am4charts.ChordDiagram);*/
+    amScript3.onload = () => */
 
 	class Chord extends HTMLElement {
         
@@ -82,7 +78,11 @@
         }
         */
 
-        redraw(){}
+        redraw(){
+	    am4core.useTheme(am4themes_animated);
+	    var chart = am4core.create("chartdiv", am4charts.ChordDiagram);*/
+
+	}
 	}
 	
 	customElements.define("com-demo-chord", Chord);
